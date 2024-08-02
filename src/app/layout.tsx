@@ -7,6 +7,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.BASE_URL ||
+      process.env.VERCEL_URL ||
+      `http://localhost:${process.env.PORT || 3000}`
+  ),
   title: { default: "My Awesome Blog", template: "%s - My Awesome Blog" },
   description: "Come and read my awesome articles.",
   twitter: {

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/privacy"],
       },
     ],
-    sitemap: `${process.env.VERCEL_URL}/sitemap.xml`,
+    sitemap: `${process.env.BASE_URL}/sitemap.xml`,
   };
 }

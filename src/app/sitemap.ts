@@ -2,7 +2,7 @@ import { BlogPostsResponse } from "@/models/BlogPost";
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.VERCEL_URL;
+  const baseUrl = process.env.BASE_URL;
   const response = await fetch("https://dummyjson.com/posts");
   const { posts }: BlogPostsResponse = await response.json();
 
